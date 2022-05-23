@@ -1,24 +1,50 @@
 
-post http://localhost:3000/register/
-Content-type: application/json
+post http://localhost:8016/register/
+Content-Type: application/json
 
 {
-  "username": "adam_richard",
-  "password": "richard_567",
-  "name": "Adam Richard",
+  "username": "toyal_14",
+  "password": "toyal14",
+  "name": "toyal",
   "gender": "male"
 }
-
 ###
-post http://localhost:3000/login/
+
+post http://localhost:8016/login/
 Content-type: application/json
 
 {
   "username":"JoeBiden",
-  "password":"biden@123"
+  "password":"biden@321"
 }
 ###
 
-GET http://localhost:3000/user/tweets/feed/
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoyLCJ1c2VybmFtZSI6IkpvZUJpZGVuIiwiaWF0IjoxNjQ4MDIxMjExfQ.76DymWM91Pb_BbVDXWeuWst-jlc6iLKIakddV_IJUwc
+GET http://localhost:8016/user/tweets/feed/
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoyLCJ1c2VybmFtZSI6IkpvZUJpZGVuIiwiaWF0IjoxNjUzMjIxNDEyfQ.mKjtu5W3JyuglkwQFCVwtceeLJ_tVWfcpyA1uGuDkKY
 ###
+
+GET http://localhost:8016/tweets/5/
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoyLCJ1c2VybmFtZSI6IkpvZUJpZGVuIiwiaWF0IjoxNjUzMjIxNDEyfQ.mKjtu5W3JyuglkwQFCVwtceeLJ_tVWfcpyA1uGuDkKY
+###
+
+POST http://localhost:8016/user/tweets/
+Content-type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoyLCJ1c2VybmFtZSI6IkpvZUJpZGVuIiwiaWF0IjoxNjUzMjIxNDEyfQ.mKjtu5W3JyuglkwQFCVwtceeLJ_tVWfcpyA1uGuDkKY
+
+{
+  "tweet": "the morning..."
+}
+###
+
+PUT http://localhost:8016/user/password_reset/
+Content-type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoyLCJ1c2VybmFtZSI6IkpvZUJpZGVuIiwiaWF0IjoxNjUzMjIxNDEyfQ.mKjtu5W3JyuglkwQFCVwtceeLJ_tVWfcpyA1uGuDkKY
+
+{
+  "oldPassword": "biden@123",
+  "newPassword": "biden@321"
+}
+###
+
+DELETE http://localhost:8016/tweets/12/
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoyLCJ1c2VybmFtZSI6IkpvZUJpZGVuIiwiaWF0IjoxNjUzMjIxNDEyfQ.mKjtu5W3JyuglkwQFCVwtceeLJ_tVWfcpyA1uGuDkKY
